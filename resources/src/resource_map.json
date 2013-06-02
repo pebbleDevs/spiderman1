@@ -1,0 +1,25 @@
+
+{"friendlyVersion": "VERSION",
+ "versionDefName": "APP_RESOURCES",
+ "media": [
+	   {
+        "type": "png",
+        "defName": "IMAGE_MENU_ICON",
+        "file": "images/menu_icon.png"
+        },
+        
+        {
+        "type": "font",
+        "characterRegex": "[:0-9]",
+        "defName": "FONT_RUSSO_42",
+        "file": "fonts/Russo_One.ttf"
+        },
+         
+        {
+        "type": "png",
+        "defName": "SPIDERMAN_BOW",
+        "file": "images/spiderman1.png"
+        }  
+
+	  ]
+}
