@@ -95,10 +95,11 @@ void handle_init(AppContextRef ctx) {
   resource_init_current_app(&APP_RESOURCES);
   
   // gfx layer init 
-  layer_init(&background_layer, GRect(56,0,88,168));
+  layer_init(&background_layer, GRect(-20,0,88,168));
   bmp_init_container(RESOURCE_ID_SPIDERMAN_BOW, &background_image);
-  //layer_set_frame(&background_image.layer.layer, GRect(1,0,144,105));
   layer_add_child(&window.layer, &background_image.layer.layer);
+  // as init layer is not updating the cordinates, i have to redo it.
+  layer_set_frame(&background_image.layer.layer, GRect(-20,0,88,168)); 
 
  
   //initilizing the text hr layer
@@ -205,6 +206,8 @@ void handle_minute_tick(AppContextRef ctx, PebbleTickEvent *t) {
  layer_set_hidden((Layer *)&text_creditLine1_layer, true);
  layer_set_hidden((Layer *)&text_creditLine2_layer, true);
  layer_set_hidden((Layer *)&text_versionInfo_layer, true);
+ // repositioning gfx layer
+ layer_set_frame(&background_image.layer.layer, GRect(0,0,88,168)); 
  
  if (clock_is_24h_style()) {
    hr_format = "%R";
