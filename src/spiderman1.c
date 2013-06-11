@@ -249,7 +249,7 @@ text_layer_set_text(&text_month_layer, month_text);
 //dealloccation when watchface is close
 void handle_deinit(AppContextRef ctx) {
         (void)ctx;
-      vibes_short_pulse();
+      //vibes_short_pulse();
       bmp_deinit_container(&background_image);
       fonts_unload_custom_font(font_russo);
       //  fonts_unload_custom_font(batman_letters_20);
